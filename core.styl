@@ -1,31 +1,71 @@
+lace-heroku-loaded()
+  .heroku-boomerang-loaded &
+    margin-top 32px
 
-el-html()
-  font-family FONT_FAMILY_MAIN
-  font-size FONT_SIZE_MAIN
-  color FONT_COLOR_NORMAL
-
-el-body()
-  display flex
-  min-height 100vh
-  flex-direction column
-  margin 0
-  &.heroku-boomerang-loaded
-    padding-top 32px
-
-el-a()
-  color FONT_COLOR_NORMAL
-  text-decoration none
-  &:visited
-  &:active
-    color FONT_COLOR_NORMAL
-    text-decoration none
-  &:hover
-    color FONT_COLOR_HIGHLIGHT
-
-flex-row-space()
+lace-row-space()
   display flex
   flex-direction row
   justify-content space-between
   align-items center
 
+lace-pad-children()
+  > figure
+  > div
+  > ul
+    &:first-child
+      margin 0 0 0 PAD_SMALL
+    &:last-child
+      margin 0 PAD_SMALL 0 0
 
+lace-brand()
+  background-size contain
+  background-repeat no-repeat
+  background-position 50%
+  filter grayscale(100%) contrast(130%)
+  size 2rem
+  &:hover
+    transition -webkit-filter 200ms linear
+    filter grayscale(0%) contrast(100%)
+  a
+    height 100%
+    width 100%
+    display block
+
+lace-main()
+  display flex
+  flex 3
+  flex-direction column
+
+lace-nav-items()
+  _color = #999
+  color _color
+  text-transform uppercase
+  font-weight bold
+  padding 0 PAD_SMALL PAD_SMALL
+  &:visited
+    color _color
+  &:hover
+    color COLOR_PRIMARY
+  &.active
+    color darken(COLOR_PRIMARY, 30%)
+
+lace-wrapper-footer()
+  display flex
+  height WEIGHT * 3
+  box-sizing border-box
+  align-items center
+  justify-content space-between
+  flex-direction row
+
+lace-content()
+  border-top 1px solid #ccc
+  border-bottom 1px solid #ccc
+  flex-direction row
+  display flex
+  flex 1
+
+lace-nav()
+  border-right 1px solid #ccc
+  text-align right
+  display flex
+  flex-direction column
