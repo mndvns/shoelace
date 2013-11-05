@@ -39,15 +39,16 @@ lace-main()
 lace-nav-items()
   _color = #999
   color _color
-  text-transform uppercase
-  font-weight bold
-  padding 0 PAD_SMALL PAD_SMALL
+  padding 0 PAD_SMALL .75rem
   &:visited
     color _color
   &:hover
     color COLOR_PRIMARY
   &.active
-    color darken(COLOR_PRIMARY, 30%)
+    color darken(COLOR_PRIMARY, 25%)
+  i
+    margin-left .7rem
+
 
 lace-wrapper-footer()
   display flex
