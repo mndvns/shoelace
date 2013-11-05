@@ -7,7 +7,12 @@
   "dependencies": {},
   "development": {},
   "license": "MIT",
-  "styles": [
-    "index.styl"
+  "files": [
+    "core.styl",
+    "index.styl",
+    "globals.styl",
+    "mixins.styl",
+    "presets.styl",
+    "variables.styl"
   ]
 }
