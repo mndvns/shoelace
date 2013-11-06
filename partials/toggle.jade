@@ -1,0 +1,11 @@
+- var i = 0;
+
+mixin toggle(string)
+  - var id = 'toggle-' + i++ + (string || '');
+  form.toggle
+    input(type="checkbox", id=id, hidden="")
+    label(for=id)
+      span.on on
+      span.off off
+      .selector.left
+      .selector.right

@@ -1,0 +1,7 @@
+mixin icon(klass)
+  case klass
+    when "close"
+      icon = "times"
+    default
+      icon = "bell"
+  i.fa(class="icon-#{klass} fa-#{icon}")

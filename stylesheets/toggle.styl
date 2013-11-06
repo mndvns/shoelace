@@ -1,0 +1,44 @@
+.toggle
+  label
+    position relative
+    cursor pointer
+    display flex
+    flex-direction row
+    align-items center
+    width 4rem
+    border 1px solid #ccc
+    text-align center
+    overflow hidden
+    *
+      transition-duration .2s!important
+      transition-property all
+    span
+      _height = 1.1rem
+      height _height
+      line-height _height
+      padding 0px
+      flex 1
+      font-size .8rem
+      font-weight bold
+    .selector
+      position absolute
+      flex 1
+      background rgba(white, .8)
+      height 100%
+      width 2rem
+      border 1px solid rgba(black, .1)
+      border-top none
+      border-bottom none
+      &.left
+        left 0
+        border-left-width 0
+      &.right
+        left 4rem
+        border-right-width 0
+  input:checked ~ label
+    .selector
+      &.left
+        left -2rem
+      &.right
+        left 2rem
+

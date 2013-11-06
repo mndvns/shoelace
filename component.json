@@ -8,11 +8,17 @@
   "development": {},
   "license": "MIT",
   "files": [
-    "core.styl",
-    "index.styl",
-    "globals.styl",
-    "mixins.styl",
-    "presets.styl",
-    "variables.styl"
+    "partials/accordion.jade",
+    "partials/icons.jade",
+    "partials/index.jade",
+    "partials/toggle.jade",
+    "stylesheets/accordion.styl",
+    "stylesheets/core.styl",
+    "stylesheets/index.styl",
+    "stylesheets/globals.styl",
+    "stylesheets/mixins.styl",
+    "stylesheets/presets.styl",
+    "stylesheets/toggle.styl",
+    "stylesheets/variables.styl"
   ]
 }
