@@ -1,0 +1,24 @@
+{
+  "name": "shoelace",
+  "version": "0.0.1",
+  "description": "Opinionated front-end components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvanasse/shoelace.git"
+  },
+  "keywords": [
+    "shoelace",
+    "jade",
+    "stylus",
+    "mixins"
+  ],
+  "author": "Michael Vanasse",
+  "license": "MIT",
+  "dependencies": {
+    "nib": "~1.0.1",
+    "jade": "~0.35.0",
+    "component-jade": "~0.4.1",
+    "component-builder": "~0.10.0"
+  }
+}

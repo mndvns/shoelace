@@ -1,5 +1,11 @@
-*
-  box-sizing border-box
+if SUPPORT_IE is false
+  *
+    // box-sizing border-box
+    box-sizing content-box
+
+else
+  ul
+    margin-left 0
 
 html
 body
@@ -14,6 +20,7 @@ html
 a
   color FONT_COLOR_NORMAL
   text-decoration none
+  cursor pointer
   &:visited
   &:active
     color FONT_COLOR_NORMAL

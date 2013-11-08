@@ -1,7 +1,8 @@
-mixin icon(klass)
+mixin icon(klass, attributes)
   case klass
     when "close"
       icon = "times"
     default
       icon = "bell"
-  i.fa(class="icon-#{klass} fa-#{icon}")
+  i.fa(class="icon-#{klass} fa-#{icon}", attributes)
+    block

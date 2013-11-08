@@ -1,29 +1,42 @@
 - var i = 0;
+- var id;
 
-mixin accordion-container
-  section.accordion(attributes)
+mixin accordion
+  - id  = 'accordion-' + i++ + (attributes["data-accordion-id"] || '');
+  section.accordion(data-ng-class="{'accordion-expanded': expanded}",
+                    attributes)
+    block
+
+mixin accordion-aside
+  aside(attributes)
+    block
+
+mixin accordion-label
+  label(attributes)
+    block
+
+mixin accordion-action
+  .accordion-action(attributes)
     block
 
 mixin accordion-header(text)
-  - var id  = 'acc-' + i++ + (attributes["data-accordion-id"] || '');
-  input(type="checkbox", id=id, hidden="")
   header
-    label.title(for=id)
-      span(attributes)= text
-    block
+    label(data-ng-click="expanded = !expanded",
+          attributes)= text
+    +accordion-aside
+      block
+      +accordion-action +
 
 mixin accordion-content
   article.accordion-content
     block
 
 mixin accordion-ul
+  hr
   ul(attributes)
     block
 
 mixin accordion-li
   li(attributes)
     block
-
-mixin accordion-li-label
-  span.name(data-hyper-bind="arm.name") block
 
