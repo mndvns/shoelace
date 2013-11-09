@@ -1,6 +1,6 @@
 {
   "name": "shoelace",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Opinionated front-end components",
   "main": "index.js",
   "repository": {
