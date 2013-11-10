@@ -1,11 +1,15 @@
 JS_FILES      = $(shell find javascripts -type f -name '*.js')
+CSS_FILES     = $(shell find stylesheets -type f -name '*.css')
 STYL_FILES    = $(shell find stylesheets -type f -name '*.styl')
 PARTIAL_FILES = $(shell find partials		 -type f -name '*.jade')
 
-build: build/build.js
+build: build/build.js build/build.css
 
-build/build.js: $(PARTIAL_FILES) $(JS_FILES) $(STYL_FILES)
-	@component build --copy --use component-jade
+build/build.css: $(STYL_FILES) $(CSS_FILES)
+	@component build --copy
+
+build/build.js: $(PARTIAL_FILES) $(JS_FILES)
+	@component build --copy
 
 components: component.json
 	@component install --dev
