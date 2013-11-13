@@ -22,7 +22,7 @@ lace-brand()
   background-repeat no-repeat
   background-position 50%
   filter grayscale(100%) contrast(130%)
-  size 2rem
+  size rem(2)
   &:hover
     transition -webkit-filter 200ms linear
     filter grayscale(0%) contrast(100%)
@@ -39,7 +39,7 @@ lace-main()
 lace-nav-items()
   _color = #999
   color _color
-  padding 0 PAD_SMALL .75rem
+  padding 0 PAD_SMALL rem(.75)
   &:visited
     color _color
   &:hover
@@ -47,7 +47,7 @@ lace-nav-items()
   &.active
     color darken(COLOR_PRIMARY, 25%)
   i
-    margin-left .7rem
+    margin-left rem(.7)
 
 
 lace-wrapper-footer()

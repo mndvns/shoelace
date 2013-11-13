@@ -1,0 +1,6 @@
+mixin modal(attributes)
+  .modal-container(data-ng-init="modal = {}",
+                   data-ng-show="modal.active")
+    .modal(attributes)
+      block
+    .bg(ng-click="modal.active = !modal.active")

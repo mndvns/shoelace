@@ -5,12 +5,16 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "mvanasse/ng-sanitize": "*"
+    "mvanasse/ng-sanitize": "*",
+    "CamShaft/component-angular": "*",
+    "CamShaft/component-angular-animate": "*"
   },
   "development": {},
   "license": "MIT",
-  "main": "javascripts/index.js",
+  "main": "public/javascripts/index.js",
   "scripts": [
-    "javascripts/index.js"
+    "public/javascripts/index.js",
+    "public/javascripts/package.js",
+    "public/javascripts/directives/modal-selector.js"
   ]
 }

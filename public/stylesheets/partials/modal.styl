@@ -1,0 +1,80 @@
+/*
+ * Modal variables.
+ */
+
+_trans_speed = .15s
+_trans_type = linear
+
+/*
+ * Modal animations.
+ */
+
+@keyframes _modal-fade-in
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes _modal-drop-down
+  0%
+    top (-(PAD))
+  100%
+    top 0
+
+/*
+ * Modal styles.
+ */
+
+.modal-container
+  absolute top
+  size 100%
+  z-index Z_INDEX_MODAL
+  display block
+  transition _trans_speed _trans_type all
+
+  &.ng-hide
+    opacity 0
+
+  &.ng-hide-remove
+    opacity 1
+    animation _trans_speed _trans_type _modal-fade-in
+
+    .modal
+      animation _trans_speed _trans_type _modal-drop-down
+
+  .modal
+    relative top
+    background white
+    margin (PAD * 4) auto
+    z-index 2
+    max-width _BODY_WIDTH - (PAD * 4)
+    box-shadow 0 3px 16px rgba(black, .4)
+
+    header
+    section
+    form
+      padding PAD
+
+  .bg
+    absolute top
+    size 100%
+    background rgba(black, 0.5)
+    z-index 1
+
+  li
+    display block
+    margin 0 auto
+    width 350px
+
+  header
+    display block
+    border-bottom 1px solid #ccc
+    text-height PAD
+    h1
+      float left
+      margin 0
+    i
+      cursor pointer
+      float right
+      margin 0
+
